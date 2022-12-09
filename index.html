@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhoneBook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #bbb9b9;
+            border-radius: 9px;
+        }
+    </style>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body class="" style="background-color: #0066ff">
+<div class="w-full h-12 flex items-center justify-center">
+    <input type="text" class="bg-white h-12 rounded-xl w-2/5 mt-12 outline-none text-xl pl-12">
+</div>
+<div class="flex justify-center contactsList">
+    <div class="w-1/2 bg-white h-96 rounded-xl mt-36 container " style="height: 40rem">
+        <div class="containerFlag w-full h-full">
+            <div class="w-full h-20 items-center flex">
+                <p class="text-2xl font-bold ml-12">My Contacts</p>
+            </div>
+            <div class="overflow-y-auto w-full contactCon" style="height: 78%"></div>
+            <div class="w-full flex justify-end">
+                <botton class="cursor-pointer h-12 w-36 font-bold rounded-xl text-white flex justify-center items-center mr-12 addContactBtn" style="background-color: #0066ff">Add Contact</botton>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-96 rounded-xl bg-white absolute top-60 border-black border hidden addContactModal animate__animated animate__backInDown" style="left: 40rem">
+    <p class="w-full flex justify-center items-center text-2xl h-12">Add Contact</p>
+    <div class="w-full flex flex-col items-center mt-8">
+        <p class="text-sm w-10/12 mb-2 text-current">Name</p>
+        <input type="text" class="rounded-md w-10/12 border border-solid border-black h-10 outline-none pl-4 contactName " value="faran">
+    </div>
+    <div class="w-full flex flex-col items-center mt-8">
+        <p class="text-sm w-10/12 mb-2 text-current">Email</p>
+        <input type="text" class="rounded-md w-10/12 border border-solid  border-black h-10 outline-none pl-4 contactEmail" value="faran@gmail.com">
+    </div>
+    <div class="w-full flex flex-col items-center mt-8">
+        <p class="text-sm w-10/12 mb-2 text-current">Phone Number</p>
+        <input type="text" class="rounded-md w-10/12 border border-solid border-black h-10 outline-none pl-4 contactNumber" value="09052256197">
+    </div>
+    <div class="w-full flex justify-around mt-16 mb-4">
+        <button class="text-white text-xl w-60 rounded-md h-10 addContact" style="background-color: #0066ff">Add Contact</button>
+        <div class="text-white text-xs w-20 rounded-md relative top-1 text-center cursor-pointer flex justify-center items-center" style="background-color: #0066ff;height: 1.9rem;left:0.09rem">contact profile</div>
+        <input  type="file" accept="image/*" class="absolute text-white left-24 opacity-0 cursor-pointer imageSelector" style="left: 18rem;top: 26rem">
+    </div>
+</div>
+<script src="./script.js" type="module" async></script>
+</body>
+</html>
